@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library App</title>
     <!-- <script src="./js/main.js" defer></script> -->
-    <script src="main.js" defer></script>
+    <script src="mainClass.js" defer></script>
 </head>
 <body>
     <button type="button" id="show-form">Add New Book</button>
     <form id="form">
-        <input type="text" id="title" placeholder="Title">
-        <input type="text" id="author" placeholder="Author">
-        <input type="number" id="pages" placeholder="Number of Pages">
+        <input type="text" id="title" placeholder="Title" required minlength="4" maxlength="120" autofocus>
+        <input type="text" id="author" placeholder="Author" required minlength="4" maxlength="120">
+        <input type="number" id="pages" placeholder="Number of Pages" required>
+        <input type="url" id="url" placeholder="Book's Image" required>
         <input type="button" id="add-book" value="add Book">
     </form>
 </body>
