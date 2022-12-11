@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library App</title>
-    <!-- <script src="./js/main.js" defer></script> -->
-    <script src="mainClass.js" defer></script>
+    <!-- <script src="main.js" defer></script> -->
+    <script src="Validate.js" defer></script>
+    <link rel="stylesheet" href="cards.css">
 </head>
 <body>
     <button type="button" id="show-form">Add New Book</button>
-    <form id="form">
+    <form id="form" novalidate>
         <input type="text" id="title" placeholder="Title" required minlength="4" maxlength="120" autofocus>
+        <span class="error" aria-live="polite"></span>
         <input type="text" id="author" placeholder="Author" required minlength="4" maxlength="120">
         <input type="number" id="pages" placeholder="Number of Pages" required>
-        <input type="url" id="url" placeholder="Book's Image" required>
+        <input type="url" id="url" placeholder="Book's Image (Optional)">
+        <input type="button" id="add-book" value="add Book">
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
